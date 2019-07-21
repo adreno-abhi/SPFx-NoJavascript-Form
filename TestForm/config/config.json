@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "test-form-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/testForm/TestFormWebPart.js",
+          "manifest": "./src/webparts/testForm/TestFormWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": {
+      "path": "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+      "globalName": "jquery"
+    },
+    "bootstrap": {
+      "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": ["jquery"]
+    },
+    "appjs": {
+      "path": "lib/webparts/testForm/scripts/app.js",
+      "globalName": "appjs"
+    },
+    "sppeoplepicker": {
+      "path": "lib/webparts/testForm/scripts/sp.peoplepicker.js",
+      "globalName": "sppeoplepicker"
+    },
+    "jqueryui": {
+      "path": "lib/webparts/testForm/scripts/jquery-ui.js",
+      "globalName": "jqueryui"
+    }
+  },
+  "localizedResources": {
+    "TestFormWebPartStrings": "lib/webparts/testForm/loc/{locale}.js"
+  }
+}
